@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <!--  -->
+    <link rel="icon" href="../multimedia/img_1S.jpg" type="image/jpg" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <section>
+            <form style="background-color: aqua; padding: 50px">
+              <fieldset
+                style="background-color: rgb(241, 220, 26); padding: 20px"
+              >
+                <legend
+                  style="
+                    font-style: italic;
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding: 0px 15px;
+                  "
+                >
+                  Datos Personales
+                </legend>
+                <!-- etiquetas para ingresar datos -->
+                <label for="nombre"> Nombre: </label>
+                <input type="text" id="nombre" name="nombre" /><br /><br />
+
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" /><br /><br />
+
+                <label for="pass">Contraseña : </label>
+                <input type="password" id="pass" name="pass" /><br /><br />
+
+                <label for="mayorEdad">Es mayor de edad: </label>
+                <input
+                  type="checkbox"
+                  id="mayorEdad"
+                  name="mayorEdad"
+                /><br /><br />
+              </fieldset>
+              <br />
+              <fieldset style="background-color: burlywood; padding: 20px">
+                <legend
+                  style="
+                    font-style: italic;
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding: 0px 15px;
+                  "
+                >
+                  Otros Datos
+                </legend>
+                <!-- etiquetas para ingresar datos -->
+                <label for="colorFavorito">Color Favorito: </label>
+                <input
+                  type="color"
+                  id="colorFavorito"
+                  name="colorFavorito"
+                /><br /><br />
+
+                <label for="rango">Rango de notas:</label>
+                <input type="range" name="rango" id="rango" /><br /><br />
+
+                <label for="numero">Temperatura: </label>
+                <input type="number" name="numero" id="numero" /><br /><br />
+
+                <label for="telf">Teléfono: </label>
+                <input type="tel" name="telf" id="telf" />
+              </fieldset>
+              <br />
+              <fieldset
+                style="
+                  background-color: rgba(222, 135, 164, 0.507);
+                  padding: 20px;
+                "
+              >
+                <legend>Acciones</legend>
+                <!-- etiquetas con mayor interactividad - eventos y acciones -->
+                <select name="" id="">
+                  <option value="futbol">Futbol</option>
+                  <option value="tenis">Tenis</option>
+                  <option value="voley">Voleyball</option>
+                  <option value="basquet">Basquetball</option>
+                </select>
+                <br /><br />
+
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Escribenos tus comentarios">
+                </textarea>
+                <hr />
+                <h5>Etiqueta "input con tipo button"</h5>
+                <input type="button" value="ENVIAR" />
+                <hr />
+                <h5>Etiqueta "button sin atributos"</h5>
+                <button>ENVIAR</button>
+                <hr />
+                <br />
+                <!-- Usando una función de JS -->
+                <button onclick="saludar()">SALUDAR</button>
+                <hr />
+                <input type="button" value="BIENVENIDO" onclick="saludar2()" />
+                <hr />
+
+                <script>
+                  function saludar() {
+                    alert("Hola, ten un buen día..!");
+                  }
+                  function saludar2() {
+                    alert("Bienvenido al mundo WEB");
+                  }
+                </script>
+              </fieldset>
+            </form>
+          </section>
+        </nav>
+      </header>
+    </main>
+  </body>
+</html>

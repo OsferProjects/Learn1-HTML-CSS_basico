@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html-bases3</title>
+  </head>
+  <body>
+    <header style="text-align: center; background-color: grey">
+      <h1 id="id_inicio">ANCLAS - IMAGENES - MULTIMEDIA</h1>
+    </header>
+
+    <nav style="border: double; background-color: greenyellow; font-size: 20px">
+      <div style="text-align: center; font-size: xx-large; padding: 4px">
+        MENU
+      </div>
+      <div style="font-size: 15px">
+        <ul>
+          <li>
+            <a href="index.html" target="_blank">IR A PÁGINA PRINCIPAL</a>
+          </li>
+          <li><a href="index2.html" target="_blank">IR A SEGUNDA PÁGINA</a></li>
+          <li>
+            <a href="https://www.google.com" target="_blank">IR A GOOGLE</a>
+          </li>
+          <li>
+            <a href="#id_video">
+              <figure>
+                <img
+                  src="../multimedia/degradado1.jpg"
+                  title="IR A VIDEO DE CIUDAD"
+                  style="width: 100px; height: 20px"
+                />
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <!-- IMAGENES -->
+      <article style="background: darkkhaki">
+        <figure>
+          <img
+            src="/Learn1/multimedia/Universo1.jpg"
+            alt="Imagen del Universo"
+            width="50%"
+          />
+          <figcaption>
+            La imagen representa el universo de forma esférica
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../multimedia/Universo2.jpg"
+            alt="Imagen del Universo"
+            width="50%"
+          />
+          <figcaption>
+            La imagen representa el universo como galaxias
+          </figcaption>
+        </figure>
+      </article>
+      <!-- AUDIO -->
+      <article style="background: rgb(117, 189, 107)">
+        <br />
+        <div style="align-content: center">
+          <audio controls>
+            <source src="../multimedia/sonido1.mp3" />
+          </audio>
+          <figcaption>Sonido de fuego artificial lanzado al aire</figcaption>
+          <br />
+        </div>
+      </article>
+      <hr />
+      <article>
+        <audio style="background: darkorange" !important; controls>
+          <source src="../multimedia/sonido2.mp3" />
+        </audio>
+        <figcaption>Sonido de fuego artificial finalizando</figcaption>
+      </article>
+      <hr />
+      <!-- VIDEO -->
+      <article>
+        <!-- vacío -->
+        <video controls>
+          <source src="" />
+        </video>
+      </article>
+      <br />
+      <hr />
+      <article>
+        <!-- video corto -->
+        <video controls>
+          <source src="../multimedia/videoGato.mp4" />
+        </video>
+      </article>
+      <br />
+      <hr />
+      <article>
+        <!-- video largo -->
+        <h4>Video con controles de volumen muteado</h4>
+        <video controls muted width="350px" height="300px" id="id_video">
+          <source src="../multimedia/videoCiudad.mp4" />
+        </video>
+      </article>
+      <br />
+      <hr />
+      <div
+        style="
+          font-style: italic;
+          font-size: 25px;
+          box-shadow: violet;
+          border: lawngreen;
+        "
+      >
+        <a href="#id_inicio">ir a INICIO</a>
+      </div>
+    </section>
+  </body>
+</html>

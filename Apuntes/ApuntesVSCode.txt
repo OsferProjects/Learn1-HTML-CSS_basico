@@ -1,0 +1,89 @@
+APUNTES HTML5 <-----> VSCode
+
+    <!-- ctrl  + F     BUSCAR-->
+    <!-- alt + shift + F     IDENTAR-->
+    <!-- alt + shift + flechas     duplicar linea-->
+    <!-- alt + shift + A      comentar lineas-->
+    <!-- alt + Z     AJUSTE AUTODINÁMICO  (para saltar lineas largas de texto o código)-->
+
+
+    <!--        <h3>Hola Mundo</h3>
+                <h3>Hola Mundo</h3>        -->
+
+
+    main+section+footer (Elementos Hermanos)
+    <!--  <main></main>
+          <section></section>
+          <footer></footer>  -->
+
+    section>article>header>h1 (Elementos Hijos)
+<section>
+    <article>
+        <header>
+            <h1></h1>
+        </header>
+    </article>
+</section>
+
+
+main>section>article>p^^^footer (Escape de la cadena de Elementos Hijos)
+<main>
+    <section>
+        <article>
+            <p></p>
+        </article>
+    </section>
+</main>
+<footer></footer>
+
+
+ul>li*5 (Reproduce una cierta cantidad la etiqueta del Elemento)
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+div>dl>(dt+dd)*3
+<div>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+</div>
+
+
+#identificador    (para div con id)
+<div id="identificador"></div>
+
+.clase (para div con clase)
+<div class="clase"></div>
+
+
+header#identificador+section.clase   (especificando identificador y clase para cada Elemento)
+<header id="identificador"></header>
+<section class="clase"></section>
+
+
+#div$$$*5   (Enumera el identificador del Elemento)
+<div id="div001"></div>
+<div id="div002"></div>
+<div id="div003"></div>
+<div id="div004"></div>
+<div id="div005"></div>
+
+
+p*4>lorem7   (Texto simulado con número de palabras)
+<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+<p>Quidem deleniti similique architecto blanditiis facere repellat!</p>
+<p>Quas odit iure aliquam, cum aperiam deleniti!</p>
+<p>Maiores pariatur numquam labore voluptatum similique dicta.</p>
+
+
