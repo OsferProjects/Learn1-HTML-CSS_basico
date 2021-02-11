@@ -1,0 +1,178 @@
+/* EL MODELO DE CAJA:    los elementos tienen 3 propiedades principales
+   
+   EL ELEMENTO: quien tiene CONTENIDO (texto, img....etc), posee propiedades generales según el CONTENIDO.
+   1) el padding: distancia entre el elemento y su borde ( with ; Toma el color del background del elemento)
+   2) el border: línea que envuelve al padding y al elemento (style ; color ; with)
+   3) el margin: distancia exterior, entre el borde y otros elementos (with; Es transparente o adquiere el color del elemento padre)
+   NOTA: todos poseen la propiedad "shorthand"
+*/
+
+
+/* https://uniwebsidad.com/  
+   https://www.w3schools.com/ */
+
+
+
+/* daremos un background al <body> para distinguir la transparencia del margin del <div> con id="agrupar"  */
+#cuerpo{
+    background-color: #00b300;
+}
+
+
+#agrupar{
+    border: solid crimson 7px;
+    margin: 60px 40px;
+    padding: 40px 60px;
+    background-color: cyan;
+    /* color: #001a00;  ---> se puede establecer el color del contenido (de la fuente) */
+}
+
+
+#cabecera{
+    border: dotted #ff3c00f3 5px;
+}
+
+#cabecera > h1{
+    border: double 3px yellow;
+    margin: 3px 15px 12px;
+    font-style:oblique;
+    background-color: thistle;
+}
+
+
+#menu{
+    background-color: #99ffbb;
+    border-radius: 12px;
+    border: dashed rgba(0, 128, 64, 0.377);
+    margin: 10px 0px;
+}
+
+
+#seccion{
+    border: solid sienna 4px;
+    padding: 20px;
+    background-color: cornsilk;
+    margin: 25px;
+}
+
+/* Pseudo clase --- “el hijo en la posición(1)..…” */
+.articulo:nth-child(1){
+    background-color: hsl(60, 100%, 70%);
+    border: solid;
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+/* Pseudo clase --- “el hijo en la posición(2)..…” */
+.articulo:nth-child(2){
+    background-color: hsla(135, 91%, 49%, 0.89);
+    border: solid;
+    padding: 15px;
+}
+
+.articulo>header {
+    /* font-size: 22px; */
+    border: 3px purple dotted;
+}
+
+.articulo>header>hgroup>h1 {
+    text-align: center;
+    background-color: rosybrown;
+    border-radius: 6px;
+    margin: 6px;
+    font-size: 28px;
+}
+
+.articulo>header>hgroup>h2 {
+    text-align: center;
+    background-color: rgb(201, 215, 228);
+    border-radius: 10px;
+    margin: 6px;
+    font-size: 20px;
+}
+
+.texto_1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15;
+    text-align:justify;
+    border: 1px solid;
+    padding: 5px;
+}
+
+#figura1{
+    text-align: left;
+    border: solid 1px;
+    padding: 10px 5px ;
+    border-color: dimgrey;
+    background-color: #A3E4D7;
+}
+
+.leyenda {
+    text-align:justify;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.divFooter {
+    text-align: right;
+    /* font: 8px bold; */
+    border: double gold 4px;
+    padding: 12px;
+    margin: 6px 8px;
+    background-color: tan;
+}
+
+.divFooter>p {
+    margin: 0px;
+}
+
+.comentario_tiempo {
+    font-weight: bold;
+    font-size: 12px;
+    border: solid;
+    padding: 5px;
+    /* margin: 50px; */
+    background-color: honeydew;
+}
+
+
+
+#columna{
+    border: solid rgba(160, 158, 45, 0.89) 4px;
+    background-color: rgba(0, 81, 255, 0.562);
+    margin: 20px;
+}
+
+#columna > h3{
+    font: 11px;
+    color: rgb(230, 88, 6);
+    border-style: dotted dashed solid double;
+    border-color: #d6eb1f;
+    padding: 5px;
+    margin: 7px;
+    background-color: #ffb3b3;
+    font-weight: bold;
+    text-align: center;
+}
+
+#columna>.quote:nth-child(odd){
+    border-style: solid;
+    margin: 4px 2px;
+}
+
+#columna>.quote:nth-child(even){
+    background-color: yellowgreen;
+    margin: 4px 2px;
+}
+
+
+
+#pie{
+    border: double 7px yellow;
+    border-radius: 6px;
+    margin: auto;
+    background-color: tomato;
+    text-align: right;
+    font-weight: lighter;
+}
+
