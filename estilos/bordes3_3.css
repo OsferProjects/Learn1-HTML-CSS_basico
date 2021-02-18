@@ -157,6 +157,7 @@
 
 #columna>.quote:nth-child(odd){
     border-style: solid;
+    background-color: crimson;
     margin: 4px 2px;
 }
 
