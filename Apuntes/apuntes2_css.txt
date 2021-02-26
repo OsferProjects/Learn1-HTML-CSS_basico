@@ -1,0 +1,176 @@
+
+
+· referencia por la palabra clave del elemento
+    p { font-size: 20px }     span { font-size: 12px } .......ETC
+
+· referencia por el atributo id (el valor del atributo id es único para cada elemento)
+    #texto1 { font-size: 20px }
+
+· referencia por el atributo class  (el punto . es xq es posible construir referencias más complejas.)
+    .texto1 { font-size: 20px }  asigna la regla de estilo a cada elemento q contenga el atributo class con valor "texto1"
+    
+    p.texto1 { font-size: 20px }  Referenciando solo elementos <p> a través del valor del atributo class.
+
+. Selector de Atributo
+    p[name] { font-size: 20px }  Referenciando solo elementos <p> que tienen el atributo name.
+
+    p[name=”mitexto”] { font-size: 20px }  Referenciando elementos <p> que tienen un atributo name con el valor "mitexto"
+
+. Expresiones Regulares (esta técnica puede ser utilizada con cualquier atributo y valor que necesitemos)
+    p[name^=”mi”] { font-size: 20px }
+    p[name$=”mi”] { font-size: 20px }
+    p[name*=”mi”] { font-size: 20px }
+
+    La regla con el selector ^= será asignada a todo elemento <p> que contiene un atributo name con un valor
+comenzado en “mi” (por ejemplo, “mitexto”, “micasa”).
+    La regla con el selector $= será asignada a todo elemento <p> que contiene un atributo name con un valor
+finalizado en “mi” (por ejemplo “textomi”, “casami”).
+    La regla con el selector *= será asignada a todo elemento <p> que contiene un atributo name con un valor que
+incluye el texto “mi” (en este caso, el texto podría también encontrarse en el medio, como en “textomicasa”).
+
+. Referenciando con pseudo clases
+    
+                                    <!DOCTYPE html>
+                                    <html lang="es">
+                                    <head>
+                                    <title>Este texto es el título del documento</title>
+                                    <link rel="stylesheet" href="misestilos.css">
+                                    </head>
+                                    <body>
+                                    <div id="wrapper">
+                                    <p class="mitexto1">Mi texto1</p>
+                                    <p class="mitexto2">Mi texto2</p>
+                                    <p class="mitexto3">Mi texto3</p>
+                                    <p class="mitexto4">Mi texto4</p>
+                                    </div>
+                                    </body>
+                                    </html>
+
+Usando pseudo clases podemos aprovechar esta organización y referenciar un elemento específico sin importar cuánto
+conocemos sobre sus atributos y el valor de los mismos: (estructura es ---->  referencia:nomPseudoclase)
+
+    p:nth-child(2){                      ------>   (“el hijo en la posición… en este caso en la segunda posición”)
+    background: #999999;
+    }
+
+                                        
+
+    .miclase:nth-child(6){                ------>   (“el hijo en la posición… en este caso en la sexta posición”)
+    background: #FFAAFF;
+    }
+
+Par e Impar   Elementos hermanos
+
+            p:nth-child(odd){      ---> IMPAR
+            background: #999999;
+            }
+
+            p:nth-child(even){     ---> PAR
+            background: #CCCCCC;
+            }
+
+Existen otras importantes pseudo clases relacionadas con esta última, como first-child, last-child y only-child,
+algunas de ellas recientemente incorporadas. La pseudo clase first-child referencia solo el primer hijo, last-child
+referencia solo el último hijo, y only-child afecta un elemento siempre y cuando sea el único hijo disponible.
+
+
+---------> Salector Universal    
+*{
+margin: 0px;
+}
+
+---------> Excepción
+:not(p){
+margin: 0px;
+}
+
+:not(.mitexto2){
+margin: 0px;
+}
+
+
+                                    ---------> Nuevos selectores
+
+div > p.mitexto2{    
+color: #990000;
+}                           modifica los elementos <p> que son hijos de un elemento <div>. En este caso, fuimos bien específicos y 
+                            referenciamos solamente el elemento <p> con el valor mitexto2 en su atributo class.
+
+
+p.mitexto2 + p{
+color: #990000;
+}                           El próximo ejemplo construye un selector utilizando el símbolo +. Este selector referencia al elemento de la derecha 
+                            cuando es inmediatamente precedido por el de la izquierda. Ambos elementos deben compartir el mismo padre
+
+
+p.mitexto2 ~ p{
+color: #990000;
+}                           El estilo será aplicado a todos los elementos <p> que son hermanos y se encuentran luego 
+                            del elemento <p> identificado con el valor mitexto2 en su atributo class
+
+
+display:inline-block 
+estandarizado en CSS3 no generan ningún
+salto de línea pero nos permiten tratarlos como elementos block y así declarar un valor de ancho determinado. Este
+parámetro también ajusta el tamaño del elemento de acuerdo con su contenido cuando el valor del ancho no fue
+especificado.
+
+Propiedad  --->   float: (left, raight)
+    El Modelo de Caja Tradicional es construido sobre estilos CSS que nos permiten especificar la posición de cada caja.
+    Usando la propiedad float podemos posicionar estas cajas del lado izquierdo o derecho de acuerdo a nuestras necesidades.
+    Tenemos que recordar siempre dar un ancho a los elementos que reciban la propiedad, este debe ser especificado mediante
+    la propiedad width, ya que en caso de no contar con esta medida los resultados al momento de aplicar float pueden resultar 
+    poco predecibles.
+
+            #seccion {
+            float: left;
+            width: 660px;
+            margin: 20px;
+            }
+
+            #columna {
+            float: left;
+            width: 220px;
+            margin: 20px 0px;
+            padding: 20px;
+            background: #CCCCCC;
+            }
+
+Propiedad  --->   clear: (both, ...etc) restaura el normal flujo del documento
+    Restaura las condiciones normales del área ocupada por el elemento, no permitiéndole posicionarse adyacente a una
+    caja flotante. El valor usualmente utilizado es both, el cual significa que ambos lados del elemento serán restaurados 
+    y el elemento seguirá el flujo normal (este elemento ya no es flotante como los anteriores). Esto, para un elemento block, 
+    quiere decir que será posicionado debajo del último elemento, en una nueva línea.
+
+
+        Modelo de contenido
+Generalmente, los elementos en línea pueden contener solo datos y otros elementos en línea. No puede colocar
+elementos de bloque dentro de elementos en línea. Los elementos a nivel de bloque pueden aparecer solo dentro
+de un <body> elemento.
+        Formato
+De forma predeterminada, los elementos en línea no obligan a que comience una nueva línea en el flujo de documentos.
+Los elementos de bloque, por otro lado, suelen provocar un salto de línea (aunque, como es habitual, esto se puede
+cambiar mediante CSS).
+
+        Modelo de contenido
+Generalmente, los elementos a nivel de bloque pueden contener elementos en línea y (a veces) otros elementos
+a nivel de bloque. Inherente a esta distinción estructural está la idea de que los elementos de bloque crean
+estructuras "más grandes" que los elementos en línea.
+        Formato
+De forma predeterminada, los elementos a nivel de bloque comienzan en nuevas líneas, pero los elementos en línea
+pueden comenzar en cualquier lugar de una línea.
+
+
+        display:inline-block 
+El elemento tendrá un comportamiento mezcla entre (inline y block) los dos anteriores.
+Permite obtener un comportamiento intermedio entre los otros dos. Los elementos inline-block fluyen con el texto y demás
+elementos como si fueran elementos en-línea y además respetan el ancho, el alto y los márgenes verticales.
+Son lo mejor de los dos mundos.
+
+https://www.lawebera.es/xhtml-css/propiedad-float-css.php
+
+        OVERFLOW:AUTO
+div {
+    overflow: auto;
+}
+

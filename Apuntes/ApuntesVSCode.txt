@@ -11,6 +11,10 @@ APUNTES HTML5 <-----> VSCode
                 <h3>Hola Mundo</h3>        -->
 
 
+<!--
+EMMET: https://www.tutorialesprogramacionya.com/herramientas/vscodeya/detalleconcepto.php?punto=16&codigo=16&inicio=0
+-->
+
     main+section+footer (Elementos Hermanos)
     <!--  <main></main>
           <section></section>
